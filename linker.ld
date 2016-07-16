@@ -6,8 +6,12 @@ SECTIONS
 
 	.text BLOCK(4K) : ALIGN(4K)
 	{
-		*(.multiboot)
 		*(.text)
+	}
+
+	.note.gnu.build-id BLOCK(4K) : ALIGN(4K)
+	{
+		*(.note.gnu.build-id)
 	}
 
 	.rodata BLOCK(4K) : ALIGN(4K)
